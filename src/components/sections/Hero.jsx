@@ -1,6 +1,8 @@
 import React, { useState, useRef, useEffect } from "react";
+import { Link, useNavigate } from "react-router-dom";
 
 export default function Hero() {
+    const navigate = useNavigate();
   const [showModal, setShowModal] = useState(false);
   const nameRef = useRef(null);
   const modalRef = useRef(null);
@@ -101,12 +103,20 @@ export default function Hero() {
                 Book For A Free Consultation
               </button>
 
-              <a
-                href="#services"
+              <Link
+                to="/"
                 className="px-8 py-4 border border-white/20 text-white rounded-xl backdrop-blur-md hover:bg-white/5 hover:border-white/40 transition-all duration-300"
+                onClick={e => {
+                  e.preventDefault();
+                  navigate("/");
+                  setTimeout(() => {
+                    const el = document.getElementById("services");
+                    if (el) el.scrollIntoView({ behavior: "smooth" });
+                  }, 100);
+                }}
               >
                 View Solutions
-              </a>
+              </Link>
             </div>
 
             <div className="mt-14 flex flex-wrap gap-10 text-sm text-slate-400 border-t border-white/10 pt-8">
