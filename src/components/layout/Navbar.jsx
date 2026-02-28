@@ -35,7 +35,7 @@ export default function Navbar() {
 
           <span className={`${scrolled ? 'text-gray-600' : 'text-white'} hidden lg:inline ml-4`}>📞 Call Us</span>
 
-          <a href="https://wa.me/" className="inline-flex items-center gap-3 px-5 py-2 rounded-full bg-gradient-to-r from-primary to-red-700 text-white font-semibold shadow-xl hover:shadow-2xl transform hover:-translate-y-1 transition">
+          <a href="https://wa.me/265883431151" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-3 px-5 py-2 rounded-full bg-gradient-to-r from-primary to-red-700 text-white font-semibold shadow-xl hover:shadow-2xl transform hover:-translate-y-1 transition">
             <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" viewBox="0 0 24 24" fill="currentColor"><path d="M20.52 3.48A11.78 11.78 0 0012 .5 11.62 11.62 0 002.92 9.6c0 2.06.54 4 1.57 5.7L.5 23.5l8.48-3.01a11.7 11.7 0 005.02 1.05h.01a11.78 11.78 0 008.51-20.06zM12 21.5h-.01c-1.47 0-2.91-.34-4.21-.99l-.31-.16-5.03 1.78 1.7-4.89-.2-.32A9.2 9.2 0 012.9 9.6c0-5.04 4.12-9.15 9.2-9.15 2.46 0 4.77.96 6.52 2.71a9.12 9.12 0 01-6.62 15.34z"/></svg>
             WhatsApp
           </a>
@@ -57,7 +57,7 @@ export default function Navbar() {
             <Link to="/contact" className="block py-2 font-medium text-white">Contact</Link>
             <div className="flex items-center justify-between mt-4">
               <span className="text-white">📞 Call Us</span>
-              <a href="https://wa.me/" className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-primary to-red-700 text-white font-semibold shadow">WhatsApp</a>
+              <a href="https://wa.me/265883431151" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-primary to-red-700 text-white font-semibold shadow">WhatsApp</a>
             </div>
           </div>
         )}

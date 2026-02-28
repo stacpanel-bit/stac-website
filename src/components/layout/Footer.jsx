@@ -30,16 +30,17 @@ export default function Footer() {
           <h4 className="text-white font-semibold mb-3">Contact</h4>
           <div className="space-y-2">
             <div>+265 883431151</div>
-            <div>stactechafrica@gmail.com</div>
+            <div>+265 985442890</div>
+            <div>stacpanel@gmail.com</div>
             <div className="flex items-center gap-3 mt-3">
-              <a href="https://facebook.com" target="_blank" rel="noreferrer" aria-label="Facebook" className="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20 transition">
-                <FaFacebookF className="text-white text-xs" />
+              <a href="https://facebook.com" target="_blank" rel="noreferrer" aria-label="Facebook" className="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center group transition">
+                <FaFacebookF className="text-white text-xs group-hover:text-[#1877F3] transition-colors duration-300" />
               </a>
-              <a href="https://twitter.com" target="_blank" rel="noreferrer" aria-label="Twitter" className="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20 transition">
-                <FaTwitter className="text-white text-xs" />
+              <a href="https://twitter.com" target="_blank" rel="noreferrer" aria-label="Twitter" className="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center group transition">
+                <FaTwitter className="text-white text-xs group-hover:text-[#1DA1F2] transition-colors duration-300" />
               </a>
-              <a href="https://instagram.com" target="_blank" rel="noreferrer" aria-label="Instagram" className="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20 transition">
-                <FaInstagram className="text-white text-xs" />
+              <a href="https://instagram.com" target="_blank" rel="noreferrer" aria-label="Instagram" className="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center group transition">
+                <FaInstagram className="text-white text-xs group-hover:text-[#E1306C] transition-colors duration-300" />
               </a>
             </div>
           </div>
