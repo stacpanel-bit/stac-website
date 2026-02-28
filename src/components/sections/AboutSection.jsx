@@ -13,13 +13,13 @@ export default function AboutSection() {
     {
       title: "Quality Assurance",
       description:
-        "We ensure reliable, secure, and scalable solutions for every project we deliver.",
+        "Reliable, secure, and scalable systems built with strict quality standards.",
       icon: `${base}Images/Quality.png`,
     },
     {
       title: "Client Focus",
       description:
-        "Tailored digital solutions designed to meet your business needs and exceed expectations.",
+        "Solutions tailored to meet business objectives and exceed expectations.",
       icon: `${base}Images/User.png`,
     },
   ];
@@ -29,129 +29,112 @@ export default function AboutSection() {
       img: `${base}Images/Founder.png`,
       name: "Samson Rashid",
       title: "Co-Founder & CTO",
+      description:
+        "Samson leads STAC Ltd’s strategic direction and technological innovation. Combining executive leadership with deep technical expertise, he architects scalable, secure systems that empower businesses across Africa.",
     },
     {
       img: `${base}Images/MIS.png`,
       name: "Gift Kang'oma",
       title: "MIS Specialist",
+      description:
+        "Gift specializes in Management Information Systems, ensuring data integrity, system optimization, and actionable digital insights that strengthen operational performance.",
     },
   ];
 
   return (
     <section
       id="about"
-      className="relative py-28 px-6 bg-gradient-to-b from-white via-gray-50 to-gray-100 overflow-hidden"
+      className="relative py-28 px-6 bg-gradient-to-br from-white via-gray-50 to-gray-100 overflow-hidden"
     >
       <div className="absolute inset-0 pointer-events-none opacity-30 bg-[radial-gradient(circle_at_top_right,#ef4444,transparent_60%)]" />
 
-      <div className="max-w-7xl mx-auto relative z-10 grid lg:grid-cols-2 gap-16 items-center">
+      {/* SECTION HEADER */}
+      <div className="max-w-4xl mx-auto text-center mb-20">
+        <h2 className="text-5xl font-extrabold tracking-tight bg-gradient-to-r from-red-600 to-gray-900 bg-clip-text text-transparent">
+          About STAC Ltd
+        </h2>
+        <p className="mt-6 text-lg text-gray-700 leading-relaxed">
+          STAC Ltd (Sammy Technology Access Company) is a premier technology and digital solutions company headquartered in Malawi. We empower organisations through innovation, connectivity, and digital transformation.
+        </p>
+      </div>
 
-        {/* LEFT CARD */}
-        <div className="bg-white/70 backdrop-blur-xl border border-gray-200 rounded-3xl p-10 shadow-xl hover:shadow-2xl transition duration-300 space-y-8">
-
-          <h2 className="text-5xl font-bold tracking-tight text-center bg-gradient-to-r from-red-600 to-gray-900 bg-clip-text text-transparent">
-            Who We Are
-          </h2>
-
-          <p className="text-gray-600 text-lg leading-relaxed">
-            STAC Ltd (Sammy Technology Access Company) is a premier technology and digital solutions company headquartered in Malawi,
-            committed to empowering organisations through innovation, connectivity, and transformation. We specialise in delivering
-            cutting-edge systems, internet services, and business technology solutions that drive growth, efficiency, and sustainability across industries.
+      {/* MAIN CONTENT */}
+      <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-start">
+        {/* LEFT SIDE - COMPANY OVERVIEW */}
+        <div className="space-y-8 bg-white/70 backdrop-blur-xl border border-gray-200 rounded-3xl p-10 shadow-xl hover:shadow-2xl transition duration-300">
+          <p className="text-gray-700 leading-relaxed text-lg">
+            We specialise in delivering cutting-edge systems, internet services, and business technology solutions that drive growth, efficiency, and sustainability across industries.
           </p>
-
-          <p className="text-gray-600 text-lg leading-relaxed">
-            In addition to enterprise systems and digital platforms, STAC Ltd also provides trusted antivirus solutions and software packages,
-            ensuring businesses and individuals have secure and future-ready tools.
+          <p className="text-gray-700 leading-relaxed text-lg">
+            In addition to enterprise systems and digital platforms, STAC Ltd provides trusted antivirus solutions and professional software packages, ensuring businesses operate with secure, future-ready technology.
           </p>
-
-          <p className="text-gray-600 text-lg leading-relaxed">
-            Founded by Samson Rashid, a visionary entrepreneur and full-stack developer passionate about bridging Africa’s digital divide.
-            His expertise spans fintech, cloud infrastructure, and scalable mobile systems.
-          </p>
-
-          {/* FEATURES */}
-          <div className="grid gap-6">
-
+          {/* FEATURES GRID */}
+          <div className="grid sm:grid-cols-2 gap-8 pt-6">
             {features.map((feature, idx) => (
-              <div
-                key={idx}
-                className="group flex gap-6 p-6 rounded-2xl border border-gray-200 bg-white/60 backdrop-blur-md hover:-translate-y-1 hover:shadow-xl transition duration-300"
-              >
-                <div className="w-16 h-16 rounded-xl bg-red-50 flex items-center justify-center shrink-0 group-hover:bg-red-100 transition">
+              <div key={idx} className="flex gap-4 items-start animate-fadeInUp" style={{ animationDelay: `${idx * 0.2}s` }}>
+                <div className="w-14 h-14 bg-red-50 rounded-xl flex items-center justify-center shadow-lg">
                   <img
                     src={feature.icon}
                     alt={feature.title}
-                    className="w-9 h-9 object-contain"
+                    className="w-8 h-8 object-contain"
                   />
                 </div>
-
                 <div>
-                  <h4 className="text-xl font-semibold text-gray-900">
+                  <h4 className="text-lg font-semibold text-gray-900">
                     {feature.title}
                   </h4>
-
-                  <p className="text-gray-600 mt-1 leading-relaxed">
+                  <p className="text-gray-600 text-sm mt-1">
                     {feature.description}
                   </p>
                 </div>
               </div>
             ))}
-
           </div>
-
-          <a
-            href="#about"
-            className="inline-block px-8 py-3 bg-gray-900 text-white rounded-xl hover:bg-gray-800 transition shadow-lg"
-          >
-            Learn More About Us
-          </a>
-
         </div>
-
-        {/* RIGHT CARD */}
-        <div className="bg-white/80 backdrop-blur-xl border border-gray-200 rounded-3xl p-10 shadow-2xl space-y-8 hover:shadow-3xl transition duration-300">
-
-          <h3 className="text-2xl font-bold text-gray-900 text-center">
-            Meet Our Team
-          </h3>
-
+        {/* RIGHT SIDE - TEAM */}
+        <div className="grid sm:grid-cols-2 gap-10">
           {founders.map((founder, idx) => (
-            <div key={idx} className="text-center space-y-5">
-
-              <div className="w-56 h-56 mx-auto rounded-full overflow-hidden border-4 border-white shadow-xl">
+            <div
+              key={idx}
+              className="bg-white/80 backdrop-blur-xl border border-gray-200 rounded-2xl p-8 text-center shadow-xl hover:shadow-2xl transition duration-300 animate-fadeInUp"
+              style={{ animationDelay: `${idx * 0.3 + 0.5}s` }}
+            >
+              <div className="w-40 h-40 mx-auto rounded-full overflow-hidden mb-6 border-4 border-white shadow-xl">
                 <img
                   src={founder.img}
                   alt={founder.name}
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover scale-105 hover:scale-110 transition-transform duration-500"
                 />
               </div>
-
-              <div>
-                <h4 className="text-xl font-semibold text-gray-900">
-                  {founder.name}
-                </h4>
-
-                <p className="text-sm text-red-600 font-medium">
-                  {founder.title}
-                </p>
-              </div>
-
-              <p className="text-gray-600 text-sm leading-relaxed max-w-sm mx-auto">
-                {founder.name === "Gift Kang'oma"
-                  ? "Gift specializes in Management Information Systems, ensuring data is structured, accessible, and actionable. He supports the company’s digital platforms with reliable information management and system optimization."
-                  : "Samson is the driving force behind STAC Ltd, leading the company’s strategic vision while overseeing all technological innovation. As both CEO and CTO, he combines entrepreneurial leadership with deep technical expertise, ensuring the company delivers secure, scalable, and transformative solutions. His dual role positions him as the architect of STAC’s growth and the guardian of its technological excellence, empowering businesses and communities across Africa."}
+              <h4 className="text-xl font-semibold text-gray-900">
+                {founder.name}
+              </h4>
+              <p className="text-red-600 text-sm font-medium mt-1">
+                {founder.title}
               </p>
-
+              <p className="text-gray-600 text-sm leading-relaxed mt-4">
+                {founder.description}
+              </p>
             </div>
           ))}
-
-          <blockquote className="border-l-4 border-red-600 pl-4 italic text-gray-600 text-sm">
-            "Together, we are building innovative digital systems that empower businesses and transform communities."
-          </blockquote>
-
         </div>
-
       </div>
+      {/* QUOTE */}
+      <div className="max-w-3xl mx-auto mt-20 text-center">
+        <blockquote className="text-2xl italic text-gray-700 border-l-4 border-red-600 pl-6 font-medium">
+          "Together, we are building innovative digital systems that empower businesses and transform communities."
+        </blockquote>
+      </div>
+      {/* ANIMATION STYLES */}
+      <style>{`
+        @keyframes fadeInUp {
+          0% { opacity: 0; transform: translateY(40px); }
+          100% { opacity: 1; transform: translateY(0); }
+        }
+        .animate-fadeInUp {
+          animation: fadeInUp 0.8s cubic-bezier(.23,1.01,.32,1) both;
+        }
+      `}</style>
     </section>
   );
 }

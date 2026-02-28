@@ -1,8 +1,9 @@
 import React, { useState, useRef, useEffect } from "react";
+import CountUp from "react-countup";
 import { Link, useNavigate } from "react-router-dom";
 
 export default function Hero() {
-    const navigate = useNavigate();
+  const navigate = useNavigate();
   const [showModal, setShowModal] = useState(false);
   const nameRef = useRef(null);
   const modalRef = useRef(null);
@@ -63,7 +64,7 @@ export default function Hero() {
       id="home"
       className="relative min-h-screen flex items-center overflow-hidden bg-slate-950"
     >
-      {/* Background Layer */}
+      {/* Background */}
       <div
         className="absolute inset-0 bg-cover bg-center"
         style={{
@@ -119,23 +120,51 @@ export default function Hero() {
               </Link>
             </div>
 
-            <div className="mt-14 flex flex-wrap gap-10 text-sm text-slate-400 border-t border-white/10 pt-8">
-              <span className="tracking-wide">Enterprise Security</span>
-              <span className="tracking-wide">Cloud-Ready Systems</span>
-              <span className="tracking-wide">Dedicated Support</span>
+            {/* PROFESSIONAL STATS SECTION */}
+            <div className="mt-16 border-t border-white/10 pt-10">
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-10 text-center sm:text-left">
+
+                <div>
+                  <h3 className="text-4xl font-bold text-white">
+                    <CountUp end={10} duration={2} />+
+                  </h3>
+                  <p className="text-slate-400 mt-2 tracking-wide text-sm uppercase">
+                    Years Experience
+                  </p>
+                </div>
+
+                <div className="sm:border-l sm:border-white/10 sm:pl-10">
+                  <h3 className="text-4xl font-bold text-white">
+                    <CountUp end={50} duration={2} />+
+                  </h3>
+                  <p className="text-slate-400 mt-2 tracking-wide text-sm uppercase">
+                    Projects Completed
+                  </p>
+                </div>
+
+                <div className="sm:border-l sm:border-white/10 sm:pl-10">
+                  <h3 className="text-4xl font-bold text-white">
+                    <CountUp end={3} duration={2} />
+                  </h3>
+                  <p className="text-slate-400 mt-2 tracking-wide text-sm uppercase">
+                    Business Divisions
+                  </p>
+                </div>
+
+              </div>
             </div>
+
           </div>
         </div>
       </div>
 
-      {/* Modal */}
+      {/* Modal (unchanged) */}
       {showModal && (
         <div className="fixed inset-0 z-50 flex items-center justify-center px-4">
           <div
             className="absolute inset-0 bg-black/80 backdrop-blur-sm"
             onClick={() => setShowModal(false)}
           />
-
           <div
             ref={modalRef}
             className="relative z-10 w-full max-w-lg animate-fadeIn"
@@ -146,67 +175,32 @@ export default function Hero() {
               onSubmit={(e) => {
                 e.preventDefault();
                 const data = new FormData(e.currentTarget);
-
                 console.log(
                   "Consultation request",
                   Object.fromEntries(data.entries())
                 );
-
                 setShowModal(false);
               }}
             >
               <h3 className="text-2xl font-semibold text-white mb-2">
                 Book Your Free Strategy Call
               </h3>
-
               <p className="text-slate-400 text-sm mb-8">
                 Share your requirements and our team will respond within 24 hours.
               </p>
 
               <div className="space-y-5">
-                <input
-                  ref={nameRef}
-                  name="name"
-                  required
-                  placeholder="Full Name"
-                  className={inputClass}
-                />
-
-                <input
-                  name="email"
-                  type="email"
-                  required
-                  placeholder="Email Address"
-                  className={inputClass}
-                />
-
-                <input
-                  name="company"
-                  placeholder="Organization Name"
-                  className={inputClass}
-                />
-
-                <textarea
-                  name="message"
-                  rows={4}
-                  placeholder="Briefly describe your requirements"
-                  className={inputClass}
-                />
+                <input ref={nameRef} name="name" required placeholder="Full Name" className={inputClass}/>
+                <input name="email" type="email" required placeholder="Email Address" className={inputClass}/>
+                <input name="company" placeholder="Organization Name" className={inputClass}/>
+                <textarea name="message" rows={4} placeholder="Briefly describe your requirements" className={inputClass}/>
               </div>
 
               <div className="mt-10 flex justify-end gap-4">
-                <button
-                  type="button"
-                  onClick={() => setShowModal(false)}
-                  className="px-6 py-2 text-slate-400 hover:text-white transition"
-                >
+                <button type="button" onClick={() => setShowModal(false)} className="px-6 py-2 text-slate-400 hover:text-white transition">
                   Cancel
                 </button>
-
-                <button
-                  type="submit"
-                  className="px-6 py-3 bg-primary text-white rounded-xl font-semibold hover:bg-primary/90 transition shadow-lg"
-                >
+                <button type="submit" className="px-6 py-3 bg-primary text-white rounded-xl font-semibold hover:bg-primary/90 transition shadow-lg">
                   Submit Request
                 </button>
               </div>

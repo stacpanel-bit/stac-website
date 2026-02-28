@@ -3,7 +3,8 @@ import { Code, Database, Smartphone, Wrench, Wifi, Monitor } from "lucide-react"
 
 export default function Services() {
   return (
-    <section id="services" className="py-28 bg-gray-100 px-6">
+    <section id="services" className="relative py-28 bg-gray-100 px-6">
+
 
       {/* HEADER */}
       <div className="text-center max-w-3xl mx-auto mb-16">
@@ -11,9 +12,7 @@ export default function Services() {
           Our Services
         </h2>
         <p className="mt-6 text-lg text-gray-600 leading-relaxed">
-          We offer comprehensive digital and technology solutions, combining
-          innovation and technical excellence to help businesses grow,
-          automate, and scale efficiently.
+          We offer comprehensive digital and technology solutions, combining innovation and technical excellence to help businesses grow, automate, and scale efficiently.
         </p>
       </div>
 
@@ -82,7 +81,7 @@ export default function Services() {
 
             <div className="flex items-center gap-4">
               <Wifi className="text-gray-800" />
-              <span>Internet Cafe Services</span>
+              <span>Internet Service Provider </span>
             </div>
 
             <div className="flex items-center gap-4">
@@ -92,7 +91,7 @@ export default function Services() {
 
             <div className="flex items-center gap-4">
               <Wrench className="text-gray-800" />
-              <span>Computer Repairs & Networking</span>
+              <span>Computer Repairs, & Networking</span>
             </div>
 
             <button className="mt-6 w-full bg-gray-900 text-white py-3 rounded-xl hover:bg-gray-800 transition">
