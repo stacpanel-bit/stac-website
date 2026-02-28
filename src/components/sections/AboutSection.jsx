@@ -28,7 +28,12 @@ export default function AboutSection() {
     {
       img: `${base}Images/Founder.png`,
       name: "Samson Rashid",
-      title: "Co-Founder & CEO",
+      title: "Co-Founder & CTO",
+    },
+    {
+      img: `${base}Images/MIS.png`,
+      name: "Gift Kang'oma",
+      title: "MIS Specialist",
     },
   ];
 
@@ -107,7 +112,7 @@ export default function AboutSection() {
         <div className="bg-white/80 backdrop-blur-xl border border-gray-200 rounded-3xl p-10 shadow-2xl space-y-8 hover:shadow-3xl transition duration-300">
 
           <h3 className="text-2xl font-bold text-gray-900 text-center">
-            Meet Our Founder
+            Meet Our Team
           </h3>
 
           {founders.map((founder, idx) => (
@@ -132,7 +137,9 @@ export default function AboutSection() {
               </div>
 
               <p className="text-gray-600 text-sm leading-relaxed max-w-sm mx-auto">
-                Samson leads both the strategic vision and the technological innovation of the company, driving secure, scalable solutions that empower businesses and communities.
+                {founder.name === "Gift Kang'oma"
+                  ? "Gift specializes in Management Information Systems, ensuring data is structured, accessible, and actionable. He supports the company’s digital platforms with reliable information management and system optimization."
+                  : "Samson is the driving force behind STAC Ltd, leading the company’s strategic vision while overseeing all technological innovation. As both CEO and CTO, he combines entrepreneurial leadership with deep technical expertise, ensuring the company delivers secure, scalable, and transformative solutions. His dual role positions him as the architect of STAC’s growth and the guardian of its technological excellence, empowering businesses and communities across Africa."}
               </p>
 
             </div>
